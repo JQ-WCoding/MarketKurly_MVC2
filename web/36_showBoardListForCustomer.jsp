@@ -22,6 +22,8 @@
 		</tr>
 		<c:set var="number" value="${number}" />
 		<c:forEach var="board" items="${boardList}">
+<%--			본인 작성 글만 확인 가능--%>
+			<c:if test="${sessionScope.id eq board.writer}">
 			<tr height="30">
 				<td width="50" align="center">${number }</td>
 				<c:set var="number" value="${number - 1}" />
@@ -30,7 +32,7 @@
 						<c:forEach var="j" begin="0" end="${board.re_step}">
 							&nbsp;
 						</c:forEach>
-					</c:if> 
+					</c:if>
 					<a href="${contextPath}/showBoardContentForCustomer.do?num=${board.num}" style="text-decoration: none">
 						${board.title}
 					</a>
@@ -39,6 +41,8 @@
 				<td width="200" align="center">${board.reg_date}</td>
 				<td width="50" align="center">${board.readcount}</td>
 			</tr>
+			</c:if>
+
 		</c:forEach>
 	</table>
 

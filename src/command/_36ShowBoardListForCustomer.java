@@ -29,7 +29,7 @@ public class _36ShowBoardListForCustomer implements CommandAction {
 		
 		int clickablePageSize = 5;
 		int pageCount = count / pageSize + (count % pageSize == 0 ? 0 : 1);	
-		int startPage = 1;
+		int startPage;
 		if(curPageNum % pageSize != 0){
 			startPage = (curPageNum / pageSize) * pageSize + 1;
 		}else{

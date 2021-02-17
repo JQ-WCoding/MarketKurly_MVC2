@@ -10,19 +10,21 @@ $(document).ready(function () {
             url: contextPath + "/searchItemPro.do",
             data: query,
             success: function (data) {
+
                 var str = '<p id="check">';
                 // location
                 var loc = data.indexOf(str);
                 var len = str.length;
 
-                var check = data.substr(loc + len, 5);
+                var check = data.substr(loc + len, 2);
 
                 alert(check)
+
                 if (check === "0") {
                     alert("검색어를 확인해주세요.");
                     $("#searchItem").val("");
                 } else {
-                    location.href = contextPath + "/showOneItem.do?item_num=" + data;
+                    location.href = contextPath + "/showOneItem.do?item_num=" + check;
                 }
             }
         })

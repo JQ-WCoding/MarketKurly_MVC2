@@ -2,6 +2,7 @@ package command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class _24Logout implements CommandAction {
 
@@ -10,7 +11,7 @@ public class _24Logout implements CommandAction {
 
 		// 사용자(1)
 		request.setAttribute("type", 1);
-		
+
 		return "/24_logout.jsp";
 	}
 

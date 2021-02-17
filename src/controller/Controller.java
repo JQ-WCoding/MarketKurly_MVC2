@@ -57,7 +57,9 @@ public class Controller extends HttpServlet {
         commandMap.put("/boardUpdateForCustomer.do", new _40BoardUpdateForCustomer());
         commandMap.put("/boardUpdateForCustomerPro.do", new _41BoardUpdateForCustomerPro());
         commandMap.put("/boardDeleteForCustomer.do", new _42BoardDeleteForCustomer());
-        commandMap.put("/searchItemPro.do", new _043searchItemPro());
+        commandMap.put("/searchItemPro.do", new _43searchItemPro());
+        commandMap.put("/adminShowBoard.do", new _44adminShowBoardList());
+        commandMap.put("/adminShowBoardContent.do" , new _45adminShowBoardContent());
     }
 
     protected void requestPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

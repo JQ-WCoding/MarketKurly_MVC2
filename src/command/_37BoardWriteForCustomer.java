@@ -10,7 +10,9 @@ public class _37BoardWriteForCustomer implements CommandAction {
 
 		// 사용자(1)
 		request.setAttribute("type", 1);
-		
+
+
+
 		return "37_boardWriteForCustomer.jsp";
 	}
 

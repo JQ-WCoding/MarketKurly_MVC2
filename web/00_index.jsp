@@ -75,7 +75,7 @@
                 </td>
                 <td width="180" align="center">
                     <font size="3" color="black">
-                        <a href="${requestScope.contextPath}/adminShowBoardList.do"><b>Q&A</b></a>
+                        <a href="${requestScope.contextPath}/adminShowBoard.do"><b>Q&A</b></a>
                     </font>
                 </td>
             </tr>
@@ -121,11 +121,22 @@
                     </font>
                 </td>
                 <td>
-                    <input type="text" id="searchItem" placeholder="물품 찾기" required="required" style="width: 242px; height: 36px; line-height: 16px; padding: 0 60px 0 14px">
-                    <button id="searchItemIcon"><img src="img/findcate.png" alt="검색버튼" style="width: 30px; height: 30px; display: block"></button>
+                    <div style="display: flex">
+                        <input type="text" id="searchItem" placeholder="물품 찾기" required="required"
+                               style="border-radius: 20px; padding: 0 60px 0 14px; height: 30px; flex: 1">
+                        <button id="searchItemIcon"
+                                style=" background: none; border: none; outline: none; flex:1">
+                            <img src="img/findcate.png" alt="검색버튼" style="width: 30px; height: 30px"
+                            ></button>
+                    </div>
+
                 </td>
                 <td>
-                    <a href="31_cartInfo.jsp" ><img src="img/cart.png" alt="카트 이미지" style="width: 35px; display: block; height: 36px"></a>
+<%--                    로그인 중일때 장바구니 아이콘 보이기--%>
+                    <c:if test="${!empty sessionScope.id}">
+                    <a href="${requestScope.contextPath}/cartInfo.do"><img src="img/cart.png" alt="카트 이미지"
+                                                   style="width: 35px; display: block; height: 36px"></a>
+                    </c:if>
                 </td>
             </tr>
         </table>
@@ -134,7 +145,7 @@
     <%-- Center (Contents) --------------------------------------------------------------------------------------- --%>
     <%--    contents 페이지 불러오기 --%>
     <div id="contents">
-<%--        <jsp:include page="${requestScope.cont}"/>--%>
+        <jsp:include page="${requestScope.cont}"/>
     </div>
     <%-- Footer --------------------------------------------------------------------------------------- --%>
     <hr color="lightgray" size="1">

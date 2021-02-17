@@ -5,7 +5,7 @@ import bean.ItemDAO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class _043searchItemPro implements CommandAction{
+public class _43searchItemPro implements CommandAction{
 
     @Override
     public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
