@@ -8,6 +8,10 @@
     <meta charset="UTF-8">
     <title>Insert title here</title>
     <style>
+        input:focus {
+            outline: none;
+        }
+
         a {
             color: black;
             text-decoration: none;
@@ -24,7 +28,13 @@
             top: 30px;
         }
     </style>
-    <script src="js/jquery-1.11.0.min.js"></script>
+
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+    </script>
+
     <script src="00_index.js"></script>
 </head>
 <body>
@@ -123,7 +133,7 @@
                 <td>
                     <div style="display: flex">
                         <input type="text" id="searchItem" placeholder="물품 찾기" required="required"
-                               style="border-radius: 20px; padding: 0 60px 0 14px; height: 30px; flex: 1">
+                               style="border-radius: 20px; padding: 0 60px 0 14px; height: 30px; flex: 1;">
                         <button id="searchItemIcon"
                                 style=" background: none; border: none; outline: none; cursor: pointer; flex:1">
                             <img src="img/findcate.png" alt="검색버튼" style="width: 30px; height: 30px"
@@ -132,10 +142,10 @@
 
                 </td>
                 <td>
-<%--                    로그인 중일때 장바구니 아이콘 보이기--%>
+                        <%--                    로그인 중일때 장바구니 아이콘 보이기--%>
                     <c:if test="${!empty sessionScope.id}">
-                    <a href="${requestScope.contextPath}/cartInfo.do"><img src="img/cart.png" alt="카트 이미지"
-                                                   style="width: 35px; display: block; height: 36px"></a>
+                        <a href="${requestScope.contextPath}/cartInfo.do"><img src="img/cart.png" alt="카트 이미지"
+                                                                               style="width: 35px; display: block; height: 36px"></a>
                     </c:if>
                 </td>
             </tr>
@@ -147,6 +157,7 @@
     <div id="contents">
         <jsp:include page="${requestScope.cont}"/>
     </div>
+
     <%-- Footer --------------------------------------------------------------------------------------- --%>
     <hr color="lightgray" size="1">
 

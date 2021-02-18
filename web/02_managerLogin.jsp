@@ -2,21 +2,14 @@
          pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Insert title here</title>
-    <%-- 외부의 자바스크립트 코드를 jsp파일로 불러오기 위한 명령어 --%>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="02_managerLogin.js"></script>
-    <style>
-        ul li {
-            list-style: none;
-        }
-    </style>
-</head>
-<body>
+<script src="02_managerLogin.js"></script>
+
+<style>
+    ul li {
+        list-style: none;
+    }
+</style>
+
 <c:if test="${empty sessionScope.id}">
     <ul>
         <li>
@@ -34,5 +27,3 @@
         </li>
     </ul>
 </c:if>
-</body>
-</html>

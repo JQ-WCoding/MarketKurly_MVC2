@@ -8,11 +8,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>showOneCategory</title>
-</head>
-<body>
 
 <h2>${requestScope.category} 카테고리</h2>
 
@@ -60,5 +55,3 @@
     </c:forEach>
 </table>
 
-</body>
-</html>

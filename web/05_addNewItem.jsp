@@ -1,18 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
-<script src="js/jquery-1.11.0.min.js"></script>
 
 <%--
 	. ajaxForm 플러그인
 	. ajax로 파일을 업로드할 때 가장 널리 사용하는 방법
  --%>
-
 <script src="js/jquery.form.min.js"></script>
 <script src="05_addnewitem.js"></script>
 
-<form method="post" id="fileUploadForm" action="${ contextPath }/addNewItemPro.do" enctype="multipart/form-data">
+<form method="post" id="fileUploadForm" action="${contextPath }/addNewItemPro.do" enctype="multipart/form-data">
 	<table border="1"  style="border-collapse:collapse;">
 		<tr height="30">
 			<td width ="200">상품 카테고리</td>

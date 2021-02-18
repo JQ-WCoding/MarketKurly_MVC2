@@ -1,19 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html>
 
-
-<head>
-    <meta charset="UTF-8">
-    <title>Insert title here</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-
-</head>
-
-<body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
 <div class="splide">
     <div class="splide__track">
@@ -26,10 +15,7 @@
     </div>
 </div>
 
-</body>
-
 <script>
-    new Splide( '.splide' ).mount();
+    new Splide('.splide').mount();
 </script>
 
-</html>

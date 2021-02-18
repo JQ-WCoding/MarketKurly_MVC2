@@ -7,11 +7,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>비밀번호 찾기</title>
-</head>
-<body>
 
 <c:choose>
     <c:when test="${requestScope.pw ne null}">
@@ -28,5 +23,3 @@
     </c:otherwise>
 </c:choose>
 
-</body>
-</html>

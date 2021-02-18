@@ -6,11 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>비밀번호 찾기</title>
-</head>
-<body>
+
+<link rel="stylesheet" href="css/findMemberPw.css">
+
 <%
     request.setCharacterEncoding("UTF-8");
 %>
@@ -28,7 +26,7 @@
         </tr>
         <tr class="tr3">
             <td class="td1">
-                <input type="text" name="name" class="input">
+                <input type="text" name="name" class="input" placeholder="이름을 입력해주세요" autofocus>
             </td>
         </tr>
         <tr class="tr2">
@@ -38,7 +36,7 @@
         </tr>
         <tr class="tr3">
             <td class="td1">
-                <input type="text" name="id" class="input">
+                <input type="text" name="id" class="input" placeholder="아이디를 입력해주세요">
             </td>
         </tr>
         <tr class="tr2">
@@ -48,7 +46,7 @@
         </tr>
         <tr class="tr3">
             <td class="td1">
-                <input type="email" name="email" class="input">
+                <input type="email" name="email" class="input" placeholder="이메일을 입력해주세요">
             </td>
         </tr>
         <tr class="tr2">
@@ -63,5 +61,3 @@
         </tr>
     </table>
 </form>
-</body>
-</html>

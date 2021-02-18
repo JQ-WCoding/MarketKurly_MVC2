@@ -1,82 +1,113 @@
-.hrBoard{
-    size: 1px;
+.hrBoard {
     color: purple;
     width: 300px;
+    border: solid 1px;
 }
-.tableSet{
+
+.tableSet {
     border-collapse: collapse;
     border: 1px;
 }
-.trBoard{
+
+.trBoard {
     height: 30px;
 }
-.tdNumber{
+
+.tdNumber {
     width: 50px;
     text-align: center;
     border-top: 2px purple solid;
     border-bottom: 2px purple solid;
 }
-.tdInNumber{
+
+.tdInNumber {
     width: 50px;
     text-align: center;
     border-bottom: 1px black solid;
 }
-.tdTitle{
+
+.tdTitle {
     width: 400px;
     text-align: center;
     border-top: 2px purple solid;
     border-bottom: 2px purple solid;
 }
-.tdInTitle{
+
+.tdInTitle {
     width: 400px;
     text-align: left;
     border-bottom: 1px black solid;
 }
-.tdWriter{
+
+.tdWriter {
     width: 200px;
     text-align: center;
     border-bottom: 2px purple solid;
     border-top: 2px purple solid;
 }
-.tdInWriter{
+
+.tdInWriter {
     width: 200px;
     text-align: center;
     border-bottom: 1px black solid;
 }
-.tdRegDate{
+
+.tdRegDate {
     width: 200px;
     text-align: center;
     border-bottom: 2px purple solid;
     border-top: 2px purple solid;
 }
-.tdInRegDate{
+
+.tdInRegDate {
     width: 200px;
     text-align: center;
     border-bottom: 1px black solid;
 }
-.tdReadCount{
+
+.tdReadCount {
     width: 50px;
     text-align: center;
     border-bottom: 2px purple solid;
     border-top: 2px purple solid;
 }
-.tdInReadCount{
+
+.tdInReadCount {
     width: 50px;
     text-align: center;
     border-bottom: 1px black solid;
 }
-.tdWrite{
+
+.tdWrite {
     width: 910px;
     text-align: right;
 }
-.tdStatus{
+
+.tdStatus {
     width: 100px;
     text-align: center;
     border-bottom: 2px purple solid;
     border-top: 2px purple solid;
 }
-.tdInStatus{
+
+.tdInStatus {
     width: 100px;
     text-align: center;
     border-bottom: 1px black solid;
+}
+
+.aList {
+    padding: 4px;
+    margin-right: 3px;
+    width: 15px;
+    color: #000;
+    border: 1px solid #eee;
+    text-align: center;
+    text-decoration: none;
+}
+
+.aList:focus, .aList:hover {
+    color: #fff;
+    border: 1px solid blueviolet;
+    background-color: blueviolet;
 }
