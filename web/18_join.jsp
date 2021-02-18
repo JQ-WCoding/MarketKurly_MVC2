@@ -19,7 +19,7 @@
 				<input type="text" id="id" name="id" placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합" style="width:300px; height:40px">
 			</td>
 			<td width="75">
-				<button id="checkDoubleId">중복확인</button>
+				<button id="checkDoubleId" style="background : none; border: none; outline: none; flex: 1; cursor: pointer"><img src="img/checkDouble.PNG" alt="중복확인" style="width: 100px; height: 40px"></button>
 			</td>
 		</tr>
 		<tr height = "50">
@@ -52,13 +52,13 @@
 				<input type="email" id="email" name="email" placeholder="예:marketkurly@kurly.com" style="width:300px; height:40px">
 			</td>
 			<td width="75">
-			<button id="checkDoubleEmail">중복확인</button>
+			<button id="checkDoubleEmail" style="background : none; border: none; outline: none; flex: 1; cursor: pointer"><img src="img/checkDouble.PNG" alt="중복확인" style="width: 100px; height: 40px"></button>
 		</td>
 		</tr>
 		<tr height="50">
 			<td colspan="3" align="center">
 				<br>
-				<button id="join">가입하기</button>
+				<button id="join" style="background : none; border: none; outline: none; flex: 1; cursor: pointer"><img src="img/join.PNG" alt="가입하기" style="width: 320px; height: 50px"></button>
 			</td>
 		</tr>
 	</table>

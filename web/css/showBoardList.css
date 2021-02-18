@@ -1,0 +1,82 @@
+.hrBoard{
+    size: 1px;
+    color: purple;
+    width: 300px;
+}
+.tableSet{
+    border-collapse: collapse;
+    border: 1px;
+}
+.trBoard{
+    height: 30px;
+}
+.tdNumber{
+    width: 50px;
+    text-align: center;
+    border-top: 2px purple solid;
+    border-bottom: 2px purple solid;
+}
+.tdInNumber{
+    width: 50px;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+.tdTitle{
+    width: 400px;
+    text-align: center;
+    border-top: 2px purple solid;
+    border-bottom: 2px purple solid;
+}
+.tdInTitle{
+    width: 400px;
+    text-align: left;
+    border-bottom: 1px black solid;
+}
+.tdWriter{
+    width: 200px;
+    text-align: center;
+    border-bottom: 2px purple solid;
+    border-top: 2px purple solid;
+}
+.tdInWriter{
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+.tdRegDate{
+    width: 200px;
+    text-align: center;
+    border-bottom: 2px purple solid;
+    border-top: 2px purple solid;
+}
+.tdInRegDate{
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+.tdReadCount{
+    width: 50px;
+    text-align: center;
+    border-bottom: 2px purple solid;
+    border-top: 2px purple solid;
+}
+.tdInReadCount{
+    width: 50px;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+.tdWrite{
+    width: 910px;
+    text-align: right;
+}
+.tdStatus{
+    width: 100px;
+    text-align: center;
+    border-bottom: 2px purple solid;
+    border-top: 2px purple solid;
+}
+.tdInStatus{
+    width: 100px;
+    text-align: center;
+    border-bottom: 1px black solid;
+}

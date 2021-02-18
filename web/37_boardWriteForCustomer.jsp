@@ -9,9 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="${contextPath}/boardWriteForCustomerPro.do">
+	<form method="post" action="${contextPath}/boardWriteForCustomerPro.do?">
 		<table border="1" style="border-collapse:collapse;">
 			<tr height="50">
+<%--				id = admin --%>
 			<c:set var="writer" value="${sessionScope.id}"/>
 				<th width="200" align="center">작성자</th>
 				<td width="400">

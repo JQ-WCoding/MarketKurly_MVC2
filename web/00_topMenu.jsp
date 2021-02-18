@@ -23,7 +23,7 @@
     <div id="status">
 <%--        <a id="signIn" href="00_topMenu.js">회원가입</a>--%>
 <%--        두가지 방법 사용 --%>
-        <button id="signIn" style="background-color: white; border: none">회원가입</button>
+        <button id="signIn" style="cursor: pointer; background-color: white; border: none">회원가입</button>
         <img alt="top" src="img/top.jpg"> &nbsp;
 
         <a href="${contextPath}/login.do">로그인</a>&nbsp;

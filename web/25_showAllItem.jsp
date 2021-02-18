@@ -10,6 +10,27 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<div>
+	<h3>상품 카테고리 검색</h3>
+	<div style="overflow: auto">
+	<form method="post" action="${contextPath}/showOneCategory.do">
+		<select name="category">
+			<option value="vegetable">채소</option>
+			<option value="fish">해산물</option>
+			<option value="meat">육류</option>
+			<option value="electronic">전자제품</option>
+		</select>
+		<input type="image" src="img/findcate.png" name="submit" value="submit" class="inputImage" style="width: 30px; height: 30px">
+	</form>
+	</div>
+</div>
+<%-- 크롬 용 --%>
+<hr style="border-top: blueviolet solid 1px">
+<br>
+
+<h1>전체 상품</h1>
+
 	<table>
 		<c:set var="i" value="0" />
 		<c:forEach var="item" items="${itemList}">

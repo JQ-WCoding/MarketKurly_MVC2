@@ -29,13 +29,16 @@
     <c:forEach var="board" items="${boardList}">
         <tr height="30">
             <td width="50" align="center">${number}</td>
+<%--            number-- --%>
             <c:set var="number" value="${number - 1}"/>
             <td width="400" align="left">
                 <c:if test="${board.re_step > 1}">
+<%--                    0 ~ re_step이 끝부붙까지 반복--%>
                     <c:forEach var="j" begin="0" end="${board.re_step}">
                         &nbsp;
                     </c:forEach>
                 </c:if>
+<%--                본문으로 이동 --%>
                 <a href="${contextPath}/adminShowBoardContent.do?num=${board.num}"
                    style="text-decoration: none">
                         ${board.title}
@@ -48,13 +51,7 @@
     </c:forEach>
 </table>
 
-<%--<table>--%>
-<%--    <tr height="30">--%>
-<%--        <td width="910" align="right">--%>
-<%--            <input type="button" value="글쓰기" onclick="location.href='${contextPath}/boardWriteForCustomer.do'">--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--</table>--%>
+<%-- 페이징 처리 --%>
 <p>
     <c:if test="${count > 0}">
     <c:if test="${startPage > clickablePageSize}">
@@ -67,5 +64,7 @@
     <a href="${contextPath}/adminShowBoard.do?curPageNum=${startPage + clickablePageSize}">[다음]</a>
     </c:if>
     </c:if>
+</p>
+
 </body>
 </html>

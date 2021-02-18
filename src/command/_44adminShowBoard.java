@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
-public class _44adminShowBoardList implements CommandAction{
+public class _44adminShowBoard implements CommandAction{
     @Override
     public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
         int pageSize = 5;

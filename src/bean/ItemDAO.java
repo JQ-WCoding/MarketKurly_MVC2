@@ -33,7 +33,7 @@ public class ItemDAO {
     }
 
     public ArrayList<ItemDTO> getAllItemList() {
-        ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
+        ArrayList<ItemDTO> itemList = new ArrayList<>();
 
         try {
             conn = getConnection();
@@ -85,7 +85,7 @@ public class ItemDAO {
     }
 
     public ArrayList<ItemDTO> getAllItem() {
-        ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
+        ArrayList<ItemDTO> itemList = new ArrayList<>();
 
         try {
             conn = getConnection();
@@ -188,7 +188,7 @@ public class ItemDAO {
     }
 
     public ArrayList<ItemDTO> getNewItem() {
-        ArrayList<ItemDTO> newList = new ArrayList<ItemDTO>();
+        ArrayList<ItemDTO> newList = new ArrayList<>();
 
         try {
             conn = getConnection();
@@ -246,7 +246,7 @@ public class ItemDAO {
     }
 
     public ArrayList<ItemDTO> getBestItem() {
-        ArrayList<ItemDTO> bestList = new ArrayList<ItemDTO>();
+        ArrayList<ItemDTO> bestList = new ArrayList<>();
 
         try {
             conn = getConnection();
@@ -303,7 +303,7 @@ public class ItemDAO {
     }
 
     public ArrayList<ItemDTO> getDiscountedItem() {
-        ArrayList<ItemDTO> discountedList = new ArrayList<ItemDTO>();
+        ArrayList<ItemDTO> discountedList = new ArrayList<>();
 
         try {
             conn = getConnection();
@@ -395,5 +395,63 @@ public class ItemDAO {
             }
         }
         return check;
+    }
+
+    /**
+     * 카테고리 검색 아이템 보내주기
+     * @param cate
+     * @return itemDTO
+     */
+    public ArrayList<ItemDTO> getOneCategory(String cate){
+        ArrayList<ItemDTO> itemList = new ArrayList<>();
+
+        try {
+            conn = getConnection();
+
+            String sql = "SELECT * FROM item WHERE item_category=?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, cate);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()){
+                ItemDTO itemDTO = new ItemDTO();
+
+                itemDTO.setItem_number(rs.getInt("item_number"));
+                itemDTO.setItem_category(rs.getString("item_category"));
+                itemDTO.setItem_name(rs.getString("item_name"));
+                itemDTO.setItem_price(rs.getInt("item_price"));
+                itemDTO.setItem_stock(rs.getInt("item_stock"));
+                itemDTO.setItem_image(rs.getString("item_image"));
+                itemDTO.setItem_info(rs.getString("Item_info"));
+                itemDTO.setDiscount_rate(rs.getInt("discount_rate"));
+                itemDTO.setReg_date(rs.getString("reg_date"));
+                itemDTO.setSold(rs.getInt("sold"));
+
+                itemList.add(itemDTO);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+            if (pstmt != null) {
+                try {
+                    pstmt.close();
+                } catch (SQLException e) {
+                }
+            }
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+        return itemList;
     }
 }

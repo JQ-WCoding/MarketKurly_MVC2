@@ -33,12 +33,15 @@
         <td align="center" width="120"> 글 내용</td>
         <td align="center" colspan="3"> ${board.content}</td>
     </tr>
+<%--    답글은 관리자만 작성 가능 / 삭제하기 --%>
     <tr height="40">
         <td align="center" colspan="4">
+<%--            관리자만 사용 가능 --%>
                 <input type="button" value="답장하기"
-                       onclick="location.href='${contextPath}/boardUpdateForCustomer.do?num=${board.num}'">
+                       onclick="location.href='${contextPath}/adminBoardReply.do?num=${board.num}'">
+<%--            관리자와 사용자의 부분이 동일함 --%>
                 <input type="button" value="삭제하기"
-                       onclick="location.href='${contextPath}/boardDeleteForCustomer.do?num=${board.num}'">
+                       onclick="location.href='${contextPath}/boardDeleteForAdmin.do?num=${board.num}'">
             <input type="button" value="목록보기" onclick="location.href='${contextPath}/showBoardListForCustomer.do'">
         </td>
     </tr>

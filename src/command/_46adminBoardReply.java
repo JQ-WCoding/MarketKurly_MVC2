@@ -6,18 +6,20 @@ import bean.BoardDTO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class _45adminShowBoardContent implements CommandAction{
+public class _46adminBoardReply implements CommandAction {
     @Override
     public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
         int num = Integer.parseInt(request.getParameter("num"));
-        // 해당 번호 게시판 가져오기
-        BoardDTO board = BoardDAO.getInstance().getOneBoard(num);
 
-        request.setAttribute("board", board);
+        String title = BoardDAO.getInstance().getOneBoard(num).getTitle();
+        request.setAttribute("title", title);
 
-        // 관리자(2)
+        // 관리자(0)
         request.setAttribute("type", 0);
 
-        return "/45_adminShowBoardContent.jsp";
+        // 번호 넘겨주기 / 댓글시 전 글의 ref 수정을 위해
+        request.setAttribute("num", num);
+
+        return "47_boardWriteForAdmin.jsp";
     }
 }

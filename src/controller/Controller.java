@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,6 +30,9 @@ public class Controller extends HttpServlet {
         commandMap.put("/deleteItemPro.do", new _09DeleteItemPro());
         commandMap.put("/checkOrderList.do", new _10CheckOrderList());
         commandMap.put("/itemListForManager.do", new _11ItemListForManager());
+        commandMap.put("/adminShowBoard.do", new _44adminShowBoard());
+        commandMap.put("/adminShowBoardContent.do" , new _45adminShowBoardContent());
+        commandMap.put("/adminBoardReply.do", new _46adminBoardReply());
 //		//--------------------------------------------------------------------------
         commandMap.put("/join.do", new _18Join());
         commandMap.put("/joinPro.do", new _19JoinPro());
@@ -58,8 +60,9 @@ public class Controller extends HttpServlet {
         commandMap.put("/boardUpdateForCustomerPro.do", new _41BoardUpdateForCustomerPro());
         commandMap.put("/boardDeleteForCustomer.do", new _42BoardDeleteForCustomer());
         commandMap.put("/searchItemPro.do", new _43searchItemPro());
-        commandMap.put("/adminShowBoard.do", new _44adminShowBoardList());
-        commandMap.put("/adminShowBoardContent.do" , new _45adminShowBoardContent());
+        commandMap.put("/boardDeleteForAdmin.do", new _47boardDeleteforAdmin());
+        commandMap.put("/boardWriteForAdmin.do", new _48boardWriteForAdmin());
+        commandMap.put("/showOneCategory.do", new _49ShowOneCategory());
     }
 
     protected void requestPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -125,7 +125,7 @@
                         <input type="text" id="searchItem" placeholder="물품 찾기" required="required"
                                style="border-radius: 20px; padding: 0 60px 0 14px; height: 30px; flex: 1">
                         <button id="searchItemIcon"
-                                style=" background: none; border: none; outline: none; flex:1">
+                                style=" background: none; border: none; outline: none; cursor: pointer; flex:1">
                             <img src="img/findcate.png" alt="검색버튼" style="width: 30px; height: 30px"
                             ></button>
                     </div>

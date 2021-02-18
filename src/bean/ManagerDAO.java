@@ -26,13 +26,17 @@ public class ManagerDAO {
 		conn = ds.getConnection();
 		return conn;		
 	}
-	
+
+	/**
+	 * 회원수 가져오기
+	 * @return cnt
+	 */
 	public int getCustomerCnt() {
 		int cnt = 0;
 		try {
 			conn = getConnection();
 			
-			String sql = "SELECT COUNT(*) FROM cart";
+			String sql = "SELECT COUNT(*) FROM customer";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
@@ -47,8 +51,12 @@ public class ManagerDAO {
 			if(rs != null) { try { rs.close(); } catch(SQLException e) {} }
 		}
 		return cnt;
-	}	
-	
+	}
+
+	/**
+	 * 등록된 물품 수 가져오기
+	 * @return cnt
+	 */
 	public int getItemCnt() {
 		int cnt = 0;
 		try {
@@ -70,7 +78,11 @@ public class ManagerDAO {
 		}
 		return cnt;
 	}
-	
+
+	/**
+	 * 구매 수 가져오기
+	 * @return cnt
+	 */
 	public int getOrderCnt() {
 		int cnt = 0;
 		try {
@@ -91,8 +103,14 @@ public class ManagerDAO {
 			if(rs != null) { try { rs.close(); } catch(SQLException e) {} }
 		}
 		return cnt;
-	}	
-	
+	}
+
+	/**
+	 * 매니저 로그인 확인
+	 * @param id
+	 * @param pw
+	 * @return check
+	 */
 	public int checkManager(String id, String pw) {
 		int check = 0;
 		try {
