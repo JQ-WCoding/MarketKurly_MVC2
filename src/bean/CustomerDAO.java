@@ -154,7 +154,92 @@ public class CustomerDAO {
 		}
 		return dto;
 	}
-	
+
+	/**
+	 * 사용자 아이디 찾기
+	 * @param name
+	 * @param email
+	 * @return id
+	 */
+	public String findId(String name, String email) {
+		String id = null;
+		try {
+			conn = getConnection();
+			String sql = "SELECT * FROM customer WHERE name=? and email=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, name);
+			pstmt.setString(2, email);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				id = rs.getString("id");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (conn != null)
+				try {
+					conn.close();
+				} catch (SQLException sqle) {
+				}
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException sqle) {
+				}
+			if (rs != null)
+				try {
+					rs.close();
+				} catch (SQLException sqle) {
+				}
+		}
+		System.out.println(" id 확인용 = " + id);
+		return id;
+	}
+
+	/**
+	 * 비밀번호 찾기
+	 * @param name
+	 * @param id
+	 * @param email
+	 * @return pw
+	 */
+	public String findPw(String name, String id, String email) {
+		String pw = null;
+		try {
+			conn = getConnection();
+			String sql = "SELECT * FROM customer WHERE name=? and id=? and email=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, name);
+			pstmt.setString(2, id);
+			pstmt.setString(3, email);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				pw = rs.getString("pw");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (conn != null)
+				try {
+					conn.close();
+				} catch (SQLException sqle) {
+				}
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException sqle) {
+				}
+			if (rs != null)
+				try {
+					rs.close();
+				} catch (SQLException sqle) {
+				}
+		}
+		System.out.println(" pw 확인용 = " + pw);
+		return pw;
+	}
 }
 
 

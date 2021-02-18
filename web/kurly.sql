@@ -1,5 +1,5 @@
 CREATE DATABASE kurly;
-USE kurly1;
+USE kurly;
 
 CREATE TABLE customer(
 	id VARCHAR(50),
@@ -67,8 +67,8 @@ create table board(
 
 ---------------------------------------------------------------------------
 insert into manager values('admin','admin','관리자');
-insert into customer values('asterria','1234','김혜민','2020-11-18','01031487426','서울시 양천구','asterria@naver.com');
-insert into customer values('qwer','1234','김혜민','2020-11-18','01031487426','서울시 양천구','qwer@naver.com');
+insert into customer values('junlee','1234','이준규','2021-02-11','01027516903','용인시 수지','junlee0620@naver.com');
+insert into customer values('qwer','1234','이중구','2020-02-13','01033334444','서울 강남','qwer@naver.com');
 insert into item values(1,'100', '대파',1200,3,'1.jpg', '대파입니다', 0, now(), 10);
 insert into item values(2,'100', '상추',2000,4,'2.jpg', '상추입니다', 10, now(), 0);
 insert into item values(3,'100', '당근',2500,8,'3.jpg', '당근입니다', 10, now(), 0);

@@ -8,6 +8,7 @@
 	. ajaxForm 플러그인
 	. ajax로 파일을 업로드할 때 가장 널리 사용하는 방법
  --%>
+
 <script src="js/jquery.form.min.js"></script>
 <script src="05_addnewitem.js"></script>
 

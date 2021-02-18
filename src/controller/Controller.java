@@ -63,6 +63,10 @@ public class Controller extends HttpServlet {
         commandMap.put("/boardDeleteForAdmin.do", new _47boardDeleteforAdmin());
         commandMap.put("/boardWriteForAdmin.do", new _48boardWriteForAdmin());
         commandMap.put("/showOneCategory.do", new _49ShowOneCategory());
+        commandMap.put("/findMemberId.do", new _50findMemberId());
+        commandMap.put("/findMemberPw.do", new _51findMemberPw());
+        commandMap.put("/findMemberIdPro.do", new _52findMemberIdPro());
+        commandMap.put("/findMemberPwPro.do", new _53findMemberPwPro());
     }
 
     protected void requestPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

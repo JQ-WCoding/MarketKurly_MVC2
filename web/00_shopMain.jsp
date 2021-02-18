@@ -21,7 +21,7 @@
             <li class="splide__slide"><img src="img/main_content1.png" alt="1" style="width: inherit"></li>
             <li class="splide__slide"><img src="img/main_content2.png" alt="2" style="width: inherit"></li>
             <li class="splide__slide"><img src="img/main_content3.png" alt="3" style="width: inherit"></li>
-            <li class="splide__slide"><img src="img/main_content4.png" alt="3" style="width: inherit"></li>
+            <li class="splide__slide"><img src="img/main_content4.png" alt="4" style="width: inherit"></li>
         </ul>
     </div>
 </div>

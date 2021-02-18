@@ -32,6 +32,7 @@ public class _06AddNewItemPro implements CommandAction {
 		String fileName = "";
 		
 		Enumeration<?> files = multiRequest.getFileNames();
+
 		while(files.hasMoreElements()) {
 			String name = (String)files.nextElement();
 			fileName = multiRequest.getFilesystemName(name);			

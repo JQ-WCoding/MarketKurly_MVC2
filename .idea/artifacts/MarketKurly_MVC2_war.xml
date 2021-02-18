@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MarketKurly_MVC2:war">
+    <output-path>$PROJECT_DIR$/classes/artifacts/MarketKurly_MVC2_war</output-path>
+    <root id="archive" name="MarketKurly_MVC2.war">
+      <element id="artifact" artifact-name="MarketKurly_MVC2:war exploded" />
+    </root>
+  </artifact>
+</component>
