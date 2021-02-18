@@ -18,9 +18,10 @@
 <div class="splide">
     <div class="splide__track">
         <ul class="splide__list">
-            <li class="splide__slide"><img src="img/center_default.jpg" alt="1" style="width: inherit; height: fit-content; padding-top: 6rem"></li>
-            <li class="splide__slide"><img src="img/center_default2.png" alt="2"></li>
-            <li class="splide__slide"><img src="img/center_default3.png" alt="3" style="width: 821px; padding-top: 8rem"></li>
+            <li class="splide__slide"><img src="img/main_content1.png" alt="1" style="width: inherit"></li>
+            <li class="splide__slide"><img src="img/main_content2.png" alt="2" style="width: inherit"></li>
+            <li class="splide__slide"><img src="img/main_content3.png" alt="3" style="width: inherit"></li>
+            <li class="splide__slide"><img src="img/main_content4.png" alt="3" style="width: inherit"></li>
         </ul>
     </div>
 </div>
