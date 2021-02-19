@@ -2,10 +2,9 @@
          pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<form method="post" action="${contextPath}/boardWriteForCustomerPro.do?">
+<form method="post" action="${contextPath}/boardWriteForCustomerPro.do">
     <table border="1" style="border-collapse:collapse;">
         <tr height="50">
-            <%--				id = admin --%>
             <c:set var="writer" value="${sessionScope.id}"/>
             <th width="200" align="center">작성자</th>
             <td width="400">

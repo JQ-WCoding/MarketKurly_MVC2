@@ -19,6 +19,7 @@ public class _19JoinPro implements CommandAction {
 		dto.setPw(request.getParameter("pw"));
 		dto.setName(request.getParameter("name"));
 		dto.setTel(request.getParameter("tel"));
+		dto.setPostcode(Integer.parseInt(request.getParameter("postcode")));
 		dto.setAddress(request.getParameter("address"));
 		dto.setEmail(request.getParameter("email"));
 		

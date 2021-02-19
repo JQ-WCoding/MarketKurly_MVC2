@@ -361,7 +361,7 @@ public class BoardDAO {
             pstmt = conn.prepareStatement(numSql);
             rs = pstmt.executeQuery();
 
-            if (rs.next()){
+            if (rs.next()) {
                 // 최대값 + 1
                 num = rs.getInt(1) + 1;
             }
@@ -384,7 +384,7 @@ public class BoardDAO {
             pstmt.executeUpdate();
 
             // 답장하기
-            String sql = "INSERT INTO board (num , writer, title, pw, reg_date, ref, re_step, re_level, readcount, content) VALUES (?,?,?,?,now(),?,?,?,0,?)";
+            String sql = "INSERT INTO board (num , writer, title, pw, reg_date, ref, re_step, re_level, readcount, content, status) VALUES (?,?,?,?,now(),?,?,?,0,?,'admin')";
             pstmt = conn.prepareStatement(sql);
 
             pstmt.setInt(1, num);
@@ -399,7 +399,7 @@ public class BoardDAO {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             if (conn != null) {
                 try {
                     conn.close();

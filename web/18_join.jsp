@@ -60,7 +60,7 @@
     <tr height="50">
         <th width="150">주소</th>
         <td width="300" align="left" colspan="2">
-            <input type="text" id="roadAddress" name="address" placeholder="주소를 입력해주세요"
+            <input type="text" id="address" name="address" placeholder="주소를 입력해주세요"
                    style="width:300px; height:40px">
         </td>
     </tr>

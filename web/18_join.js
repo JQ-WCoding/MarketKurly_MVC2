@@ -86,6 +86,7 @@ $(document).ready(function () {
                     pw: $("#pw").val(),
                     name: $("#name").val(),
                     tel: $("#tel").val(),
+                    postcode: $("#postcode").val(),
                     address: $("#address").val(),
                     email: $("#email").val()
                 },
@@ -150,6 +151,13 @@ function checkInfo() {
         status = false;
         return false;
     }
+
+    if (!$("#postcode").val()) {
+        alert("우편번호를 입력하세요.");
+        $("#postcode").focus();
+        status = false;
+        return false;
+    }
 }
 
 function execDaumPostcode() {
@@ -195,7 +203,7 @@ function execDaumPostcode() {
             //     guideTextBox.innerHTML = '';
             //     guideTextBox.style.display = 'none';
             // }
-            $("#roadAddress").val(roadAddr);
+            $("#address").val(roadAddr);
             $("#postcode").val(data.zonecode);
             console.log(data);
         }
