@@ -1,5 +1,6 @@
 CREATE
 DATABASE kurly;
+
 USE
 kurly;
 
@@ -53,12 +54,12 @@ CREATE TABLE buy
     address       VARCHAR(100)
 );
 
-CREATE table manager
-(
-    id   varchar(50),
-    pw   varchar(50),
-    name varchar(50)
-);
+    CREATE table manager
+    (
+        id   varchar(50),
+        pw   varchar(50),
+        name varchar(50)
+    );
 
 create table board
 (
@@ -96,7 +97,7 @@ values (3, 'vegetable', '당근', 2500, 8, '3.jpg', '당근입니다', 10, now()
 insert into item
 values (4, 'vegetable', '깻잎', 1200, 0, '4.jpg', '깻잎입니다', 0, now(), 0);
 insert into item
-values (5, 'vegetable', '애호박', vegetable0, 5, '5.jpg', '애호박입니다', 0, now(), 0);
+values (5, 'vegetable', '애호박', 1000, 5, '5.jpg', '애호박입니다', 0, now(), 0);
 insert into item
 values (6, 'vegetable', '버섯', 1500, 4, '6.jpg', '버섯입니다', 20, now(), 0);
 insert into item

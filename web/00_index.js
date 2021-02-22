@@ -15,10 +15,12 @@ $(document).ready(function () {
                 // location
                 var loc = data.indexOf(str);
                 var len = str.length;
-
+                // loc + len
                 var check = data.substr(loc + len, 2);
 
-                if (check === "0") {
+                console.log(check);
+
+                if (check == 0) {
                     alert("검색어를 확인해주세요.");
                     $("#searchItem").val("");
                 } else {

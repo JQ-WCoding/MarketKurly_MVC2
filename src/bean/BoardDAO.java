@@ -367,7 +367,7 @@ public class BoardDAO {
             }
 
             // 상태 창 업데이트
-            String statusSql = "UPDATE board SET status='complete' WHERE ref=? and re_step=? and re_level=?";
+            String statusSql = "UPDATE board SET status='complete' WHERE ref=? and re_step=? and re_level>?";
             pstmt = conn.prepareStatement(statusSql);
             pstmt.setInt(1, ref);
             pstmt.setInt(2, re_step);
