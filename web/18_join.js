@@ -77,7 +77,9 @@ $(document).ready(function () {
     $("#join").click(function () {
         checkInfo();
 
-        if (status && checkEmail && checkId) {
+        if (!checkEmail || !checkId){
+            alert("중복확인을 먼저 해주세요");
+        }else if (status && checkEmail && checkId) {
             $.ajax({
                 type: "post",
                 url: contextPath + "/joinPro.do",
